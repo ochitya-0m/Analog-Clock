@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.clock{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.932);
+    border-radius: 50%;
+    box-shadow: 10px 50px 70px rgba(0,0,0,0.25)
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 10px rgba(0,0,0,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.932);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    z-index: 100000;
+}
+.clock span{
+    position: absolute;
+    inset: 20px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    transform: rotate(calc(30deg*var(--i)));
+}
+.clock span b{
+    font-size: 2em;
+    font-weight: 600;
+    display: inline-block;
+    transform: rotate(calc(-30deg*var(--i)));
+}
+.circle{
+    position: absolute;
+    height: 500PX;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
+}
+.circle i{
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background: var(--clr);
+    opacity: 0.75;
+    transform-origin: bottom;
+    transform: scale(0.5);
+    z-index: 10;
+}
+.circle2{
+    height: 250px;
+    z-index: 10;
+}
+
+.circle3{
+    height: 380px;
+    z-index: 10;
+}
+
